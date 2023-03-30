@@ -1,0 +1,19 @@
+{
+    "increment": "Incremento",
+    "text": "Has pulsado el botón tantas veces:",
+    "addDeposit": "+ Add Deposit",
+    "information": "Información",
+    "statistics": "Estadísticas",
+    "orderBook": "Libro de pedidos",
+    "all": "TODOS",
+    "y1": "1 año",
+    "m1": "1M",
+    "h24": "24H",
+    "h1": "1H",
+    "candleChart": "Gráfico de velas",
+    "graph": "Grafico",
+    "relativeStrength": "Fuerza relativa",
+    "pointsDistribution": "Distribución de puntos",
+    "bid": "Licitación",
+    "ask": "Pedir"
+}

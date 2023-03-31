@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 mixin AppColors {
+  static const Color blue = Color(0xFF4A77C3);
+
   static const Color dark = Color(0xFF17171a);
   static const Color darkGreyInactive = Color(0xFF1d1d23);
   static const Color darkGrey = Color(0xFF22222b);
@@ -12,9 +14,9 @@ mixin AppColors {
   static const Color backgroundSelected = Color(0xFF343245);
   static const Color textSecondary = Color(0xFF747482);
   static const Color textGrey = Color(0xFFa6a6aa);
-  static const Color activeGreen = Color(0xFF1FCD93);
+  static const Color activeGreen = Color(0xFF00D199);
   static const Color lightGreen = Color(0xFFEAFAF7);
-  static const Color activeBlue = Color(0xFF3069dd);
+  static const Color activeBlue = Color(0xFF286BFF);
   static const Color activeYellow = Color(0xFFFFEA32);
   static const Color activeOrange = Color(0xFFFE5900);
   static const Color bottomBar = Color(0xFF000000);

@@ -1,7 +1,7 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/core/dto/chart_model.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
+import 'package:flutter_app/app/data/model/chart_model.dart';
 
 typedef ChartModel = CommonChartModel;
 
@@ -26,6 +26,11 @@ class AquaArcChart extends StatelessWidget {
 
   charts.Color getColor(int index) {
     var originalColor = activeColors[index];
+    return charts.Color(
+        r: originalColor.red, g: originalColor.green, b: originalColor.blue);
+  }
+
+  charts.Color convertColor(Color originalColor) {
     return charts.Color(
         r: originalColor.red, g: originalColor.green, b: originalColor.blue);
   }

@@ -1,4 +1,6 @@
-class HomeController {
+import 'package:flutter_app/app/core/base/base_controller.dart';
+
+class HomeController extends BaseController {
   void navigateCreateTeam() {
     // Get.toNamed(Routes.createTeam.name, id: 1);
   }

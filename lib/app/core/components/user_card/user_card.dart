@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
+import 'package:gradient_borders/gradient_borders.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({super.key});
@@ -8,13 +9,28 @@ class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      CircleAvatar(
-        backgroundImage: Image.asset(
-          AppAssets.user,
-          // height: 70,
-          // width: 100,
-        ).image,
-        radius: 40,
+      Container(
+        padding: const EdgeInsets.all(2),
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          border: GradientBoxBorder(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 226, 193, 59),
+                Color.fromARGB(255, 239, 163, 32)
+              ],
+            ),
+            width: 4,
+          ),
+        ),
+        child: CircleAvatar(
+          backgroundImage: Image.asset(
+            AppAssets.user,
+            // height: 70,
+            // width: 100,
+          ).image,
+          radius: 40,
+        ),
       ),
       const SizedBox(width: 8),
       Column(

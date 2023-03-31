@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:flutter_app/app/core/theme/app_colors.dart';
 
 class StackedFillColorBarChart extends StatelessWidget {
   final List<charts.Series<PlayerParamsData, String>> seriesList;
@@ -14,6 +15,11 @@ class StackedFillColorBarChart extends StatelessWidget {
       // Disable animations for image tests.
       animate: false,
     );
+  }
+
+  static charts.Color convertColor(Color originalColor) {
+    return charts.Color(
+        r: originalColor.red, g: originalColor.green, b: originalColor.blue);
   }
 
   @override
@@ -75,9 +81,9 @@ class StackedFillColorBarChart extends StatelessWidget {
         strokeWidthPxFn: (datum, index) => 2,
         colorFn: (data, __) {
           if (data.sales >= 5) {
-            return charts.MaterialPalette.blue.shadeDefault;
+            return convertColor(AppColors.activeBlue);
           }
-          return charts.MaterialPalette.blue.shadeDefault;
+          return convertColor(AppColors.activeBlue);
         },
         // outsideLabelStyleAccessorFn: (datum, index) => ,
 
@@ -85,13 +91,14 @@ class StackedFillColorBarChart extends StatelessWidget {
       ),
       // Hollow green bars.
       charts.Series<PlayerParamsData, String>(
-          id: 'transparent',
-          domainFn: (PlayerParamsData sales, _) => sales.year,
-          measureFn: (PlayerParamsData sales, _) => sales.sales,
-          data: hollowBars,
-          radiusPxFn: (datum, index) => 5,
-          colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
-          fillColorFn: (_, __) => charts.MaterialPalette.green.shadeDefault),
+        id: 'transparent',
+        domainFn: (PlayerParamsData sales, _) => sales.year,
+        measureFn: (PlayerParamsData sales, _) => sales.sales,
+        data: hollowBars,
+        radiusPxFn: (datum, index) => 5,
+        colorFn: (_, __) => convertColor(AppColors.activeGreen),
+        fillColorFn: (_, __) => convertColor(AppColors.activeGreen),
+      ),
     ];
   }
 }

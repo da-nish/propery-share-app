@@ -48,6 +48,8 @@ dependencies:
   dio: ^4.0.4
   pretty_dio_logger: ^1.1.1
   animated_toggle_switch: ^0.6.2
+  gradient_borders: ^1.0.0
+  avatar_glow: ^2.0.2
 
 dev_dependencies:
   flutter_test:

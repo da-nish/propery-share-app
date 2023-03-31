@@ -12,7 +12,7 @@ class SectionTitle extends StatelessWidget {
       Text(
         title,
         style: AppTextStyle.h3Bold(
-          color: AppColors.activeBlue,
+          color: AppColors.blue,
         ),
       ),
       const SizedBox(width: 8),
@@ -20,7 +20,7 @@ class SectionTitle extends StatelessWidget {
         child: Container(
             height: 3,
             width: double.infinity,
-            color: AppColors.activeBlue,
+            color: AppColors.blue,
             child: Container()),
       )
     ];

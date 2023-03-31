@@ -1,7 +1,8 @@
+import 'package:flutter_app/app/core/components/user_card/user_card.dart';
+import 'package:flutter_app/app/core/routes/app_pages.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/modules/home/presentation/widget/user_card.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -14,10 +15,9 @@ class AppDrawer extends StatelessWidget {
           horizontal: Dimens.paddingS, vertical: Dimens.paddingXS),
       child: InkWell(
         onTap: () {
-          Get.back(id: 1);
+          Get.back();
           if (ontap != null) {
             ontap();
-            // Get.toNamed("page", id: 1);
           }
         },
         child: Column(
@@ -50,8 +50,14 @@ class AppDrawer extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                  onPressed: () => Get.back(), icon: const Icon(Icons.clear)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(
+                      onPressed: () => Get.back(),
+                      icon: const Icon(Icons.clear)),
+                ],
+              ),
               const SizedBox(height: Dimens.grid16),
               const Padding(
                 padding: EdgeInsets.symmetric(
@@ -59,13 +65,15 @@ class AppDrawer extends StatelessWidget {
                 child: UserCard(),
               ),
               const SizedBox(height: Dimens.grid16),
-              _getCard('Overview', AppAssets.drawerUserIcon),
-              _getCard('Tax Center', AppAssets.drawerChartIcon),
-              Expanded(child: Container()),
-              _getCard('Logout', AppAssets.drawerExitIcon, hideDivider: true,
-                  ontap: () {
-                // Get.offAllNamed(Routes.loginScreen.name);
+              _getCard('Overview', AppAssets.drawerUserIcon, ontap: () {
+                Get.toNamed(Routes.home.name);
               }),
+              _getCard('Tax Center', AppAssets.drawerChartIcon, ontap: () {
+                Get.toNamed(Routes.taxCenter.name);
+              }),
+              Expanded(child: Container()),
+              _getCard('Logout', AppAssets.drawerExitIcon,
+                  hideDivider: true, ontap: () {}),
             ],
           ),
         ),

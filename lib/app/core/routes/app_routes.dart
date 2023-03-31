@@ -4,6 +4,7 @@ enum Routes {
   //New Routes
 
   home("/home"),
+  taxCenter("/tax_center"),
   launch('/'),
   // assetDetailScreen("/asset_detail_screen"),
   // globalSearch("/global_search_screen"),

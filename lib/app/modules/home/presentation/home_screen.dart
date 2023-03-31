@@ -3,6 +3,7 @@ import 'package:flutter_app/app/core/components/app_topbar/app_appbar_home.dart'
 import 'package:flutter_app/app/core/components/chart/aqua_arc_chart.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable_style.dart';
+import 'package:flutter_app/app/core/dto/chart_model.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter_app/app/modules/home/controller/home_controller.dart';
@@ -13,7 +14,6 @@ import 'package:flutter_app/app/modules/home/presentation/widget/property_card.d
 import 'package:flutter_app/app/modules/home/presentation/widget/section_title.dart';
 import 'package:flutter_app/app/modules/home/presentation/widget/user_card.dart';
 import 'package:get/get.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../../../generated/l10n.dart';
 
 enum OrderType { stop, limit, market }
@@ -111,44 +111,64 @@ class HomeScreen extends GetView<HomeController> {
               title: "Rents",
               positionRight: true,
             ),
-            Stack(
-              alignment: Alignment.bottomRight,
-              children: [
-                SizedBox(
-                  height: 200,
-                  child: SizedBox(
-                    child: AquaArcChart(
-                      [
-                        Pair(1, "1"),
-                        Pair(2, "2"),
-                      ],
-                      arcWidth: 27,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: SizedBox(
-                    height: 100,
-                    child: AquaArcChart(
-                      [
-                        Pair(1, "1"),
-                        Pair(2, "2"),
-                      ],
-                      displayLabels: false,
-                      arcWidth: 27,
-                    ),
-                  ),
-                ),
-              ],
-            ),
 
             const SizedBox(height: 24),
             const SectionTitle(
               title: "Investment Breakup",
             ),
             const SizedBox(height: 24),
+            AppContainer(
+              child: SizedBox(
+                height: 200,
+                width: 200,
+                child: Stack(
+                  alignment: Alignment.topRight,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  children: [
+                    Opacity(
+                      opacity: 0.5,
+                      child: Container(
+                        // alignment: Alignment.bottomRight,
+                        alignment: Alignment.centerRight,
+                        height: 80,
+                        width: 80,
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: AquaArcChart(
+                            [
+                              CommonChartModel(1, '3'),
+                              CommonChartModel(2, '2'),
+                            ],
+                            title: "Location",
+                            displayLabels: false,
+                            arcWidth: 27,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 0,
+                      child: Container(
+                        // color: Colors.yellow,
+                        width: 300,
+                        alignment: Alignment.topLeft,
+                        height: 180,
+                        child: AquaArcChart(
+                          title: "Investment\ntype",
+                          [
+                            CommonChartModel(3, 'Direct'),
+                            CommonChartModel(2, 'Fund'),
+                          ],
+                          arcWidth: 27,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
+
             const SectionTitle(
               title: "Current Investment",
               positionRight: true,

@@ -16,7 +16,7 @@ class UserCard extends StatelessWidget {
         ).image,
         radius: 40,
       ),
-      SizedBox(width: 8),
+      const SizedBox(width: 8),
       Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +27,7 @@ class UserCard extends StatelessWidget {
                 "Praveen Kumar",
                 style: AppTextStyle.h3Bold(),
               ),
-              Icon(
+              const Icon(
                 Icons.verified,
                 color: AppColors.activeGreen,
               )
@@ -40,9 +40,8 @@ class UserCard extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text("Resident"),
                   style: ButtonStyle(
-                    minimumSize: MaterialStateProperty.all(Size(60, 24)),
+                    minimumSize: MaterialStateProperty.all(const Size(60, 24)),
                     elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -50,8 +49,9 @@ class UserCard extends StatelessWidget {
                       ),
                     ),
                   ),
+                  child: const Text("Resident"),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 OutlinedButton(
@@ -65,12 +65,13 @@ class UserCard extends StatelessWidget {
                     ],
                   ),
                   style: ButtonStyle(
-                    minimumSize: MaterialStateProperty.all(Size(40, 24)),
+                    minimumSize: MaterialStateProperty.all(const Size(40, 24)),
                     elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
-                          side: BorderSide(color: AppColors.yellow1, width: 2)),
+                          side: const BorderSide(
+                              color: AppColors.yellow1, width: 2)),
                     ),
                   ),
                 ),

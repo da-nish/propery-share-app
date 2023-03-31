@@ -55,7 +55,7 @@ class FilterBottomSheet extends GetView<TaxCenterController> {
                   ],
                 ),
                 const SizedBox(height: Dimens.grid10),
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: Wrap(
                       children: controller.fyList

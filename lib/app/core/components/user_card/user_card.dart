@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/core/components/raised_button/app_raised_button.dart';
-import 'package:flutter_app/app/core/components/raised_button/app_raised_button_style.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:gradient_borders/gradient_borders.dart';

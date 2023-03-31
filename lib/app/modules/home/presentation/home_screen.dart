@@ -1,8 +1,8 @@
 import 'package:flutter_app/app/core/components/app_drawer/app_appdrawer.dart';
 import 'package:flutter_app/app/core/components/app_switcher/swicher.dart';
 import 'package:flutter_app/app/core/components/app_topbar/app_appbar_home.dart';
-import 'package:flutter_app/app/core/components/chart/aqua_arc_chart.dart';
-import 'package:flutter_app/app/core/components/chart/aqua_stacked_bar_chart.dart';
+import 'package:flutter_app/app/core/components/chart/app_arc_chart.dart';
+import 'package:flutter_app/app/core/components/chart/app_stacked_bar_chart.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable_style.dart';
 import 'package:flutter_app/app/core/components/floating_button/floating_button.dart';
@@ -10,7 +10,6 @@ import 'package:flutter_app/app/core/components/property_card/property_card.dart
 import 'package:flutter_app/app/core/components/shadow_container/app_container.dart';
 import 'package:flutter_app/app/core/components/title_section/section_title.dart';
 import 'package:flutter_app/app/core/components/user_card/user_card.dart';
-import 'package:flutter_app/app/core/routes/app_pages.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/data/model/chart_model.dart';
 import 'package:flutter_app/app/modules/home/controller/home_controller.dart';
@@ -83,8 +82,7 @@ class HomeScreen extends GetView<HomeController> {
                     children: [
                       Opacity(
                         opacity: 0.5,
-                        child: Container(
-                          // alignment: Alignment.bottomRight,
+                        child: SizedBox(
                           height: Dimens.grid80,
                           width: Dimens.grid80,
                           child: AquaArcChart(

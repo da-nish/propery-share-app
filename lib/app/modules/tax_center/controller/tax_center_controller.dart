@@ -1,5 +1,4 @@
 import 'package:flutter_app/app/core/base/base_controller.dart';
-import 'package:flutter_app/app/core/routes/app_pages.dart';
 import 'package:flutter_app/app/data/model/pair.dart';
 import 'package:flutter_app/app/data/repository/api_repository.dart';
 import 'package:flutter_app/app/data/model/report_model.dart';
@@ -38,7 +37,7 @@ class TaxCenterController extends BaseController {
   final RxString _selectedFY = "1".obs;
   String get selectedFY => _selectedFY.value;
   set selectedFY(String value) {
-    if (_selectedFY != value) {
+    if (selectedFY != value) {
       _selectedFY.value = value;
       updateRecord();
     }

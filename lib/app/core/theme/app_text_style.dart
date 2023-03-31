@@ -111,7 +111,6 @@ mixin AppTextStyle {
 
   static TextStyle h7Bold(
           {Color? color,
-          fontFamily: 'Montserrat',
           FontStyle fontStyle = FontStyle.normal,
           FontWeight fontWeight = FontWeight.bold}) =>
       TextStyle(

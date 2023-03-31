@@ -50,7 +50,6 @@ class _AppSwitcherState extends State<AppSwitcher> {
             onTap: () => toggle(),
             iconBuilder: (size, bb, __) {
               return const SizedBox();
-              // return Icon(Icons.circle, color: AppColors.activeBlue);
             },
           ),
         ),

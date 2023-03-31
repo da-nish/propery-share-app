@@ -1,9 +1,7 @@
 import 'package:flutter_app/app/core/components/user_card/user_card.dart';
 import 'package:flutter_app/app/core/routes/app_pages.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
-import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class AppDrawer extends StatelessWidget {

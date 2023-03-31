@@ -93,7 +93,7 @@ class TaxCenterScreen extends GetView<TaxCenterController> {
               children: [
                 InkWell(
                   onTap: () {
-                    Get.bottomSheet(FilterBottomSheet(),
+                    Get.bottomSheet(const FilterBottomSheet(),
 
                             // settings: RouteSettings(
                             //     name: Routes.moveTo.name,

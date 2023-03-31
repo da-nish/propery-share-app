@@ -36,6 +36,7 @@ class AppTopBarHome extends StatelessWidget implements PreferredSizeWidget {
                     Image.asset(
                       AppAssets.logo,
                       // color: AppColors.dark,
+                      height: 30,
                       color: AppColors.white,
                     )
                   ],

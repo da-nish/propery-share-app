@@ -34,70 +34,101 @@ class PropertyCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                  text: TextSpan(
-                      style: const TextStyle(height: 1.6, letterSpacing: 0.58),
-                      children: [
-                        TextSpan(
-                            text: 'Drawdown capital: ',
-                            style:
-                                AppTextStyle.h6Regular(color: AppColors.dark)),
-                        TextSpan(
-                            text: '75,00,000',
-                            style:
-                                AppTextStyle.h6Medium(color: AppColors.dark)),
-                      ]),
-                ),
-                RichText(
-                  text: TextSpan(
-                      style: const TextStyle(height: 1.6, letterSpacing: 0.58),
-                      children: [
-                        TextSpan(
-                            text: 'Current valuation: ',
-                            style:
-                                AppTextStyle.h6Regular(color: AppColors.dark)),
-                        TextSpan(
-                            text: '84,00,000',
-                            style:
-                                AppTextStyle.h6Medium(color: AppColors.dark)),
-                        TextSpan(
-                            text: '+12%',
-                            style: AppTextStyle.h7Medium(
-                                color: AppColors.activeGreen)),
-                      ]),
-                ),
-                RichText(
-                  text: TextSpan(
-                      style: const TextStyle(height: 1.6, letterSpacing: 0.58),
-                      children: [
-                        TextSpan(
-                            text: 'Current monthly distribution:',
-                            style:
-                                AppTextStyle.h6Regular(color: AppColors.dark)),
-                        TextSpan(
-                            text: '60,000',
-                            style:
-                                AppTextStyle.h6Medium(color: AppColors.dark)),
-                      ]),
-                ),
-                RichText(
-                  text: TextSpan(
-                      style: const TextStyle(height: 1.6, letterSpacing: 0.58),
-                      children: [
-                        TextSpan(
-                            text: 'Current annualized yield: ',
-                            style:
-                                AppTextStyle.h6Regular(color: AppColors.dark)),
-                        TextSpan(
-                            text: '8.00%',
-                            style: AppTextStyle.h6Medium(
-                                color: AppColors.activeGreen)),
-                      ]),
-                ),
-              ],
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Flexible(
+                        child: RichText(
+                          text: TextSpan(
+                              style: const TextStyle(
+                                  height: 1.6, letterSpacing: 0.58),
+                              children: [
+                                TextSpan(
+                                    text: 'Drawdown capital: ',
+                                    style: AppTextStyle.h6Regular(
+                                        color: AppColors.dark)),
+                                TextSpan(
+                                    text: '75,00,000',
+                                    style: AppTextStyle.h6Medium(
+                                        color: AppColors.dark)),
+                              ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: RichText(
+                          text: TextSpan(
+                              style: const TextStyle(
+                                  height: 1.6, letterSpacing: 0.58),
+                              children: [
+                                TextSpan(
+                                    text: 'Current valuation: ',
+                                    style: AppTextStyle.h6Regular(
+                                        color: AppColors.dark)),
+                                TextSpan(
+                                    text: '84,00,000',
+                                    style: AppTextStyle.h6Medium(
+                                        color: AppColors.dark)),
+                                TextSpan(
+                                    text: '+12%',
+                                    style: AppTextStyle.h7Medium(
+                                        color: AppColors.activeGreen)),
+                              ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: RichText(
+                          text: TextSpan(
+                              style: const TextStyle(
+                                  height: 1.6, letterSpacing: 0.58),
+                              children: [
+                                TextSpan(
+                                    text: 'Current monthly distribution:',
+                                    style: AppTextStyle.h6Regular(
+                                        color: AppColors.dark)),
+                                TextSpan(
+                                    text: '60,000',
+                                    style: AppTextStyle.h6Medium(
+                                        color: AppColors.dark)),
+                              ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: RichText(
+                          text: TextSpan(
+                              style: const TextStyle(
+                                  height: 1.6, letterSpacing: 0.58),
+                              children: [
+                                TextSpan(
+                                    text: 'Current annualized yield: ',
+                                    style: AppTextStyle.h6Regular(
+                                        color: AppColors.dark)),
+                                TextSpan(
+                                    text: '8.00%',
+                                    style: AppTextStyle.h6Medium(
+                                        color: AppColors.activeGreen)),
+                              ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             )
           ],
         ),

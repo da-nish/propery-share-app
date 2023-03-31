@@ -105,17 +105,4 @@ class Dimens {
   static const double grid170 = 170;
   static const double grid180 = 180;
   static const double grid200 = 200;
-
-  /// Radius
-
-  static const BorderRadius borderRadius = BorderRadius.only(
-    topLeft: Radius.circular(23.0),
-    topRight: Radius.circular(23.0),
-    bottomLeft: Radius.circular(23.0),
-    bottomRight: Radius.circular(0),
-  );
-  static const BorderRadius radiusS = BorderRadius.all(Radius.circular(4));
-  static const BorderRadius radiusTrailingS = BorderRadius.only(
-      topRight: Radius.circular(4), bottomRight: Radius.circular(4));
-  static const BorderRadius radiusML = BorderRadius.all(Radius.circular(24));
 }

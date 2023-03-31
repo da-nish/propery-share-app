@@ -110,10 +110,7 @@ class TaxCenterScreen extends GetView<TaxCenterController> {
                             isScrollControlled: true,
                             backgroundColor: AppColors.white)
                         .whenComplete(
-                      () {
-                        // controller.refreshList();
-                        // print("call back");
-                      },
+                      () {},
                     );
                   },
                   child: Container(

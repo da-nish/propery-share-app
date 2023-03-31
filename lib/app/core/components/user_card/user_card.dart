@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app/core/components/raised_button/app_raised_button.dart';
+import 'package:flutter_app/app/core/components/raised_button/app_raised_button_style.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:gradient_borders/gradient_borders.dart';
@@ -29,7 +31,7 @@ class UserCard extends StatelessWidget {
             // height: 70,
             // width: 100,
           ).image,
-          radius: 40,
+          radius: 32,
         ),
       ),
       const SizedBox(width: 8),
@@ -45,12 +47,13 @@ class UserCard extends StatelessWidget {
               ),
               const Icon(
                 Icons.verified,
+                size: 20,
                 color: AppColors.activeGreen,
               )
             ],
           ),
           SizedBox(
-            height: 32,
+            height: 22,
             // color: AppColors.activeBlue,
             child: Row(
               children: [
@@ -79,11 +82,16 @@ class UserCard extends StatelessWidget {
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                           side: const BorderSide(
-                              color: AppColors.yellow1, width: 2)),
+                              color: AppColors.yellow1, width: 5)),
                     ),
                   ),
                   child: Row(
                     children: [
+                      const Icon(
+                        Icons.stars_sharp,
+                        color: AppColors.yellow2,
+                        size: 14,
+                      ),
                       Text(
                         "Gold",
                         style: AppTextStyle.h6Medium(color: AppColors.yellow1),

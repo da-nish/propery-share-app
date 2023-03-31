@@ -10,7 +10,7 @@ class AppFloatingButton extends StatelessWidget {
     return AvatarGlow(
       glowColor: Colors.red,
       endRadius: 40.0,
-      duration: const Duration(milliseconds: 3000),
+      duration: const Duration(milliseconds: 2000),
       repeat: true,
       showTwoGlows: true,
       repeatPauseDuration: const Duration(milliseconds: 400),

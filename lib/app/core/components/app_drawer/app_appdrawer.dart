@@ -9,7 +9,8 @@ import 'package:get/get.dart';
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
 
-  Widget _getCard(String text, String icon, {ontap, bool hideDivider = false}) {
+  Widget _getCard(String text, IconData icon,
+      {ontap, bool hideDivider = false}) {
     return Padding(
       padding: const EdgeInsets.symmetric(
           horizontal: Dimens.paddingS, vertical: Dimens.paddingXS),
@@ -25,7 +26,7 @@ class AppDrawer extends StatelessWidget {
           children: [
             Row(
               children: [
-                SvgPicture.asset(icon),
+                Icon(icon),
                 const SizedBox(width: Dimens.grid8),
                 Text(text),
               ],
@@ -65,15 +66,14 @@ class AppDrawer extends StatelessWidget {
                 child: UserCard(),
               ),
               const SizedBox(height: Dimens.grid16),
-              _getCard('Overview', AppAssets.drawerUserIcon, ontap: () {
+              _getCard('Overview', Icons.space_dashboard_rounded, ontap: () {
                 Get.toNamed(Routes.home.name);
               }),
-              _getCard('Tax Center', AppAssets.drawerChartIcon, ontap: () {
+              _getCard('Tax Center', Icons.wallet_travel, ontap: () {
                 Get.toNamed(Routes.taxCenter.name);
               }),
               Expanded(child: Container()),
-              _getCard('Logout', AppAssets.drawerExitIcon,
-                  hideDivider: true, ontap: () {}),
+              _getCard('Logout', Icons.login, hideDivider: true, ontap: () {}),
             ],
           ),
         ),

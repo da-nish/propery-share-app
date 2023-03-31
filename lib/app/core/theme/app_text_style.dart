@@ -51,6 +51,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -61,6 +62,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h4,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -68,6 +70,7 @@ mixin AppTextStyle {
           {Color? color, FontStyle fontStyle = FontStyle.normal}) =>
       TextStyle(
           fontSize: Dimens.h4,
+          fontFamily: 'Montserrat',
           fontWeight: FontWeight.w600,
           color: color,
           fontStyle: fontStyle);
@@ -91,6 +94,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h6,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -101,16 +105,19 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h7,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
   static TextStyle h7Bold(
           {Color? color,
+          fontFamily: 'Montserrat',
           FontStyle fontStyle = FontStyle.normal,
           FontWeight fontWeight = FontWeight.bold}) =>
       TextStyle(
           fontSize: Dimens.h7,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -119,6 +126,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h7,
           fontWeight: FontWeight.w600,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -129,6 +137,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h8,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -138,6 +147,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h1,
           fontWeight: FontWeight.w500,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -146,6 +156,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h2,
           fontWeight: FontWeight.w500,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
   static TextStyle h25Medium(
@@ -153,6 +164,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -163,6 +175,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h3,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -174,6 +187,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -182,6 +196,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w600,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -190,6 +205,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h5,
           fontWeight: FontWeight.w500,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -201,6 +217,7 @@ mixin AppTextStyle {
           fontSize: Dimens.h6,
           fontWeight: fontWeight,
           color: color,
+          fontFamily: 'Montserrat',
           fontStyle: fontStyle);
 
   static TextStyle h7Medium(
@@ -208,6 +225,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h7,
           fontWeight: FontWeight.w500,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -217,6 +235,7 @@ mixin AppTextStyle {
           fontSize: Dimens.h8,
           fontWeight: FontWeight.w500,
           color: color,
+          fontFamily: 'Montserrat',
           fontStyle: fontStyle);
 
   //regular
@@ -224,6 +243,7 @@ mixin AppTextStyle {
           {Color? color, FontStyle fontStyle = FontStyle.normal}) =>
       TextStyle(
           fontSize: Dimens.h1,
+          fontFamily: 'Montserrat',
           fontWeight: FontWeight.w400,
           color: color,
           fontStyle: fontStyle);
@@ -232,6 +252,7 @@ mixin AppTextStyle {
           {Color? color, FontStyle fontStyle = FontStyle.normal}) =>
       TextStyle(
           fontSize: Dimens.h2,
+          fontFamily: 'Montserrat',
           fontWeight: FontWeight.w400,
           color: color,
           fontStyle: fontStyle);
@@ -241,6 +262,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h3,
           fontWeight: FontWeight.w400,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -276,6 +298,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h6,
           fontWeight: FontWeight.w400,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -284,6 +307,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h7,
           fontWeight: FontWeight.w400,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 
@@ -292,6 +316,7 @@ mixin AppTextStyle {
       TextStyle(
           fontSize: Dimens.h8,
           fontWeight: FontWeight.w400,
+          fontFamily: 'Montserrat',
           color: color,
           fontStyle: fontStyle);
 }

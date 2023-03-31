@@ -27,8 +27,7 @@ class FilterBottomSheet extends GetView<TaxCenterController> {
           width: Dimens.grid40,
           height: Dimens.grid4,
           decoration: BoxDecoration(
-              color: AppColors.grey2,
-              borderRadius: AppStyle.circularBorder(radius: Dimens.grid4)),
+              color: AppColors.grey2, borderRadius: BorderRadius.circular(4)),
         ),
         const SizedBox(height: Dimens.grid16),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [

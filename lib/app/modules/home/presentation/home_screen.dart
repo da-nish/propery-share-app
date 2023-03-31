@@ -85,20 +85,16 @@ class HomeScreen extends GetView<HomeController> {
                         opacity: 0.5,
                         child: Container(
                           // alignment: Alignment.bottomRight,
-                          alignment: Alignment.centerRight,
                           height: Dimens.grid80,
                           width: Dimens.grid80,
-                          child: Align(
-                            alignment: Alignment.topRight,
-                            child: AquaArcChart(
-                              [
-                                CommonChartModel(1, '3'),
-                                CommonChartModel(2, '2'),
-                              ],
-                              title: "Location",
-                              displayLabels: false,
-                              arcWidth: Dimens.grid28,
-                            ),
+                          child: AquaArcChart(
+                            [
+                              CommonChartModel(1, '3'),
+                              CommonChartModel(2, '2'),
+                            ],
+                            title: "Location",
+                            displayLabels: false,
+                            arcWidth: Dimens.grid28,
                           ),
                         ),
                       ),

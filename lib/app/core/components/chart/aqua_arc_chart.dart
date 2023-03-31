@@ -47,7 +47,6 @@ class AquaArcChart extends StatelessWidget {
             data: data!,
             labelAccessorFn: (data, index) {
               return data.label;
-              // return arcLabel != null ? arcLabel!(data, index) : "";
             },
             colorFn: (ChartModel paramData, int? index) {
               return getColor(index!);
@@ -60,8 +59,14 @@ class AquaArcChart extends StatelessWidget {
                   charts.DatumLegend(
                     showMeasures: true,
                     position: charts.BehaviorPosition.bottom,
-                    desiredMaxColumns: 4,
+                    desiredMaxColumns: 2,
                     legendDefaultMeasure: charts.LegendDefaultMeasure.none,
+                    entryTextStyle: charts.TextStyleSpec(
+                        fontSize: 12,
+                        color: charts.Color(
+                            r: labelColor.red,
+                            g: labelColor.green,
+                            b: labelColor.blue)),
                   ),
                 ],
           layoutConfig: charts.LayoutConfig(
@@ -70,9 +75,9 @@ class AquaArcChart extends StatelessWidget {
             topMarginSpec: charts.MarginSpec.defaultSpec,
             bottomMarginSpec: charts.MarginSpec.defaultSpec,
           ),
-          animate: true,
+          animate: false,
           defaultRenderer: charts.ArcRendererConfig(
-              arcWidth: 8,
+              arcWidth: 6,
               strokeWidthPx: 0,
               startAngle: 40,
               arcRendererDecorators: !displayLabels
@@ -91,14 +96,10 @@ class AquaArcChart extends StatelessWidget {
                           labelPosition: charts.ArcLabelPosition.outside)
                     ])),
       Center(
-        child: Positioned(
-          // right: 0,
-          // bottom: 0,
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: AppTextStyle.h7Bold(),
-          ),
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: AppTextStyle.h7Bold(),
         ),
       )
     ]);

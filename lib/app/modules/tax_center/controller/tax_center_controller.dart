@@ -55,8 +55,6 @@ class TaxCenterController extends BaseController {
     apiRecords[selectedFY] = await getReport();
     _displayList.value = apiRecords[selectedFY];
     _displayList.refresh();
-
-    print(apiRecords);
   }
 
   Quarter calculateTotal(List<Quarter> list) {
@@ -92,7 +90,6 @@ class TaxCenterController extends BaseController {
         response.quarter.add(calculateTotal(response.quarter));
       }
 
-      print(response?.quarter);
       return response;
     }, onError: (Exception exception) {
       isLoading = false;

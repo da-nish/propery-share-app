@@ -27,10 +27,10 @@ class AppExpandable extends StatefulWidget {
       : super(key: key);
 
   @override
-  _AppExpandableState createState() => _AppExpandableState();
+  AppExpandableState createState() => AppExpandableState();
 }
 
-class _AppExpandableState extends State<AppExpandable> {
+class AppExpandableState extends State<AppExpandable> {
   bool expanded = false;
 
   @override

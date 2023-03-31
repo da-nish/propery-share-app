@@ -1,22 +1,23 @@
 import 'package:flutter_app/app/core/components/app_drawer/app_appdrawer.dart';
 import 'package:flutter_app/app/core/components/app_topbar/app_appbar_home.dart';
 import 'package:flutter_app/app/core/components/chart/aqua_arc_chart.dart';
+import 'package:flutter_app/app/core/components/chart/aqua_stacked_bar_chart.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable.dart';
 import 'package:flutter_app/app/core/components/expanded_tile/app_expandable_style.dart';
 import 'package:flutter_app/app/core/dto/chart_model.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
-import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter_app/app/modules/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/modules/home/presentation/widget/app_container.dart';
-import 'package:flutter_app/app/modules/home/presentation/widget/app_switcher.dart';
 import 'package:flutter_app/app/modules/home/presentation/widget/property_card.dart';
 import 'package:flutter_app/app/modules/home/presentation/widget/section_title.dart';
+import 'package:flutter_app/app/modules/home/presentation/widget/swicher.dart';
 import 'package:flutter_app/app/modules/home/presentation/widget/user_card.dart';
 import 'package:get/get.dart';
-import '../../../../generated/l10n.dart';
 
 enum OrderType { stop, limit, market }
+
+enum InvestType { direct, fund }
 
 class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
@@ -113,6 +114,12 @@ class HomeScreen extends GetView<HomeController> {
             ),
 
             const SizedBox(height: 24),
+            const AppContainer(
+              child: SizedBox(height: 200, child: StackedFillColorBarChart([])),
+            ),
+
+            const SizedBox(height: 24),
+
             const SectionTitle(
               title: "Investment Breakup",
             ),
@@ -186,9 +193,7 @@ class HomeScreen extends GetView<HomeController> {
                 Row(
                   children: const [
                     Spacer(),
-                    Text("Direct"),
-                    SizedBox(width: 12),
-                    Text("Fund"),
+                    AppSwitcher(InvestType.direct),
                   ],
                 ),
                 AppExpandable(
@@ -240,7 +245,8 @@ class HomeScreen extends GetView<HomeController> {
                   ],
                 )
               ],
-            ))
+            )),
+            const SizedBox(height: 40)
           ]),
     );
   }

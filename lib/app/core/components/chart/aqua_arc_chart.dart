@@ -2,7 +2,6 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/core/dto/chart_model.dart';
 import 'package:flutter_app/app/core/theme/theme.dart';
-import 'package:flutter_app/app/modules/home/presentation/widget/app_switcher.dart';
 
 typedef ChartModel = CommonChartModel;
 
@@ -19,7 +18,8 @@ class AquaArcChart extends StatelessWidget {
   ];
 
   AquaArcChart(this.data,
-      {this.arcWidth = Dimens.grid16,
+      {super.key,
+      this.arcWidth = Dimens.grid16,
       this.displayLabels = true,
       this.title = "",
       this.labelColor = AppColors.dark});

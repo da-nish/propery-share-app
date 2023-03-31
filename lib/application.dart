@@ -22,7 +22,7 @@ class Application extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL.name,
+      initialRoute: AppPages.initial.name,
       initialBinding: InitialBinding(),
       supportedLocales: S.delegate.supportedLocales,
     );

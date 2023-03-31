@@ -1,6 +1,5 @@
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AppTheme {
   static final defaultTheme = ThemeData(

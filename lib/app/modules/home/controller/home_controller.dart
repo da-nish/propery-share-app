@@ -1,5 +1,3 @@
-import 'package:get/get.dart';
-
 class HomeController {
   void navigateCreateTeam() {
     // Get.toNamed(Routes.createTeam.name, id: 1);

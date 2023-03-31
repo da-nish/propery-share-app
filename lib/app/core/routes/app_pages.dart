@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.home;
+  static const initial = Routes.home;
 
   static final routes = [
     GetPage<MaterialPageRoute>(

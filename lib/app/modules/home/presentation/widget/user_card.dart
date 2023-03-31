@@ -33,7 +33,7 @@ class UserCard extends StatelessWidget {
               )
             ],
           ),
-          Container(
+          SizedBox(
             height: 32,
             // color: AppColors.activeBlue,
             child: Row(
@@ -56,14 +56,6 @@ class UserCard extends StatelessWidget {
                 ),
                 OutlinedButton(
                   onPressed: () {},
-                  child: Row(
-                    children: [
-                      Text(
-                        "Gold",
-                        style: AppTextStyle.h6Medium(color: AppColors.yellow1),
-                      ),
-                    ],
-                  ),
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size(40, 24)),
                     elevation: MaterialStateProperty.all(0),
@@ -73,6 +65,14 @@ class UserCard extends StatelessWidget {
                           side: const BorderSide(
                               color: AppColors.yellow1, width: 2)),
                     ),
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Gold",
+                        style: AppTextStyle.h6Medium(color: AppColors.yellow1),
+                      ),
+                    ],
                   ),
                 ),
               ],

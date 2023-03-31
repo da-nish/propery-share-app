@@ -1,6 +1,7 @@
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app/modules/home/presentation/widget/user_card.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -43,38 +44,23 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 0,
+      width: double.infinity,
       child: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                  onPressed: () => Get.back(), icon: const Icon(Icons.clear)),
               const SizedBox(height: Dimens.grid16),
-              Padding(
-                padding: const EdgeInsets.symmetric(
+              const Padding(
+                padding: EdgeInsets.symmetric(
                     horizontal: Dimens.paddingS, vertical: Dimens.paddingXS),
-                child: Row(
-                  children: [
-                    Image.asset(AppAssets.placeholderUserImage),
-                    const SizedBox(width: Dimens.grid12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Robert McLarren",
-                          style: AppTextStyle.h5Bold(),
-                        ),
-                        Text(
-                          "\$2,540",
-                          style: AppTextStyle.h3Bold(),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                child: UserCard(),
               ),
               const SizedBox(height: Dimens.grid16),
-              _getCard('Account', AppAssets.drawerUserIcon),
-              _getCard('Portfolio', AppAssets.drawerChartIcon),
-              _getCard('Fantasy league', AppAssets.drawerCupIcon),
+              _getCard('Overview', AppAssets.drawerUserIcon),
+              _getCard('Tax Center', AppAssets.drawerChartIcon),
               Expanded(child: Container()),
               _getCard('Logout', AppAssets.drawerExitIcon, hideDivider: true,
                   ontap: () {

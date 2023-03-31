@@ -1,7 +1,6 @@
 import 'package:flutter_app/app/core/theme/theme.dart';
 import 'package:flutter_app/app/core/values/app_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class AppTopBarHome extends StatelessWidget implements PreferredSizeWidget {
   // final List<Widget> actions;
@@ -24,12 +23,8 @@ class AppTopBarHome extends StatelessWidget implements PreferredSizeWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
-                onTap: () => Scaffold.of(context).openDrawer(),
-                child: SvgPicture.asset(
-                  AppAssets.appDrawerIcon,
-                  color: AppColors.white,
-                ),
-              ),
+                  onTap: () => Scaffold.of(context).openDrawer(),
+                  child: const Icon(Icons.menu)),
               Text(title),
               InkWell(
                 onTap: () {
